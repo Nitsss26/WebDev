@@ -9,8 +9,8 @@ export const metadata = {
 const Portfolio = () => {
   return (
     <>
-    <Breadcrumbs name={"Portfolio"}/>
-    <PortfolioIsoTop/>
+      <Breadcrumbs name={"Portfolio"} />
+      <PortfolioIsoTop />
     </>
   )
 }

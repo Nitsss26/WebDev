@@ -301,7 +301,6 @@
 @apply text-3xl lg:text-4xl font-extrabold capitalize tracking-tight
 }
 
-
 .breadcrumbs-btn{
   @apply p-1
 }
@@ -433,12 +432,12 @@
   clip-path: circle(200% at 0% 0%);
 }
 
-.single-feature-two.sky-shape:after {
-  background-color: #0298ff;
+.single-feature-two.orange-shape:after {
+  background-color: #ff6a00;
 }
 
-.single-feature-two.sky-shape:hover .h2-feature-icon svg path {
-  fill: #0298ff !important;
+.single-feature-two.orange-shape:hover .h2-feature-icon svg path {
+  fill: #ff6a00 !important;
 }
 
 .single-feature-two.blue-shape:after {
@@ -449,12 +448,34 @@
   fill: #0a35dc !important;
 }
 
+.single-feature-two.green-shape:after {
+  background-color: #59d576;
+}
+
+.single-feature-two.green-shape:hover .h2-feature-icon svg path {
+  fill: #59d576 !important;
+}
+
 .single-feature-two.red-shape:after {
-  background-color: #f15f73;
+  background-color: #ec4b4b;
 }
 
 .single-feature-two.red-shape:hover .h2-feature-icon svg path {
-  fill: #f15f73 !important;
+  fill: #ec4b4b !important;
+}
+.single-feature-two.sky-shape:after {
+  background-color: #0490e0 ;
+}
+
+.single-feature-two.sky-shape:hover .h2-feature-icon svg path {
+  fill: #0490e0 !important;
+}
+.single-feature-two.gray-shape:after {
+  background-color: #2A2A2A;
+}
+
+.single-feature-two.gray-shape:hover .h2-feature-icon svg path {
+  fill: #2A2A2A !important;
 }
 
 .single-feature-two.indigo-shape:after {
@@ -520,7 +541,7 @@
 }
 
 .footer-bg {
-  background-color: #07011e;
+  background-color: #232022;
 }
 
 
@@ -667,9 +688,23 @@
   fill: #f76b1c !important;
 }
 
+.svg-red svg path,
+.svg-red svg circle {
+  fill: #df3d65 !important;
+}
+
+.svg-green svg path,
+.svg-green svg circle {
+  fill: #14eca8 !important;
+}
+
 .svg-purple svg path,
 .svg-purple svg circle {
-  fill: #7900f3 !important;
+  fill: #f76b1c !important;
+}
+.svg-purple svg path,
+.svg-purple svg circle {
+  fill: #a667e5 !important;
 }
 
 .svg-ired svg path,
@@ -811,6 +846,128 @@
   transition: 1s ease-in;
 }
 
+.service-card-five-red {
+  padding: 50px 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.service-card-five-red:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #df3d65;
+  z-index: -1;
+  -webkit-clip-path: circle(0% at 50% 50%);
+  clip-path: circle(0% at 50% 50%);
+}
+
+.service-card-five-red:hover svg path,
+.service-card-five-red:hover svg circle {
+  fill: #fff !important;
+}
+
+.service-card-five-red:hover h3,
+.service-card-five-red:hover p {
+  color: #ffffff !important;
+}
+
+.service-card-five-red:hover:after {
+  -webkit-clip-path: circle(200% at 50% 50%);
+  clip-path: circle(200% at 50% 50%);
+  transition: 1s ease-in;
+}
+
+.service-card-five-purple {
+  padding: 50px 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.service-card-five-purple:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a667e5;
+  z-index: -1;
+  -webkit-clip-path: circle(0% at 50% 50%);
+  clip-path: circle(0% at 50% 50%);
+}
+
+.service-card-five-purple:hover svg path,
+.service-card-five-purple:hover svg circle {
+  fill: #fff !important;
+}
+
+.service-card-five-purple:hover h3,
+.service-card-five-purple:hover p {
+  color: #ffffff !important;
+}
+
+.service-card-five-purple:hover:after {
+  -webkit-clip-path: circle(200% at 50% 50%);
+  clip-path: circle(200% at 50% 50%);
+  transition: 1s ease-in;
+}
+
+.service-card-five-green {
+  padding: 50px 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.service-card-five-green:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #14eca8;
+  z-index: -1;
+  -webkit-clip-path: circle(0% at 50% 50%);
+  clip-path: circle(0% at 50% 50%);
+}
+
+.service-card-five-green:hover svg path,
+.service-card-five:hover svg circle {
+  fill: #fff !important;
+}
+
+.service-card-five-green:hover h3,
+.service-card-five-green:hover p {
+  color: #ffffff !important;
+}
+
+.service-card-five-green:hover:after {
+  -webkit-clip-path: circle(200% at 50% 50%);
+  clip-path: circle(200% at 50% 50%);
+  transition: 1s ease-in;
+}
 
 .svg-50 svg {
   height: 50px;
@@ -1221,4 +1378,94 @@
 .carousel{
   cursor: grab;
   overflow: hidden;
+}
+
+.section-white {
+    background: #fff;
+    padding: 70px 0;
+}
+
+.team-item {
+    background: #f4f5f6;
+    text-align: center;
+    margin: 20px 0;
+    padding: 50px 20px 40px 20px;
+    border-radius: 8px;
+    transition: all 0.25s ease-in-out;
+}
+
+.team-item:hover {
+    background: #3956de;
+    color: white;
+}
+
+.team-item h3 {
+    margin: 20px 0 1px 0;
+    color: #454545;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .25s ease-in-out;
+}
+
+.section-subtitle {
+    white-space: pre-line;
+}
+
+.team-info {
+    display: block;
+    margin-bottom: 0;
+}
+
+.team-info p {
+    color: #acacac;
+    font-style: italic;
+}
+
+.team-info::after {
+    background: #008aff;
+    background: -webkit-linear-gradient(135deg, #6B02FF 0%, #985BEF 100%);
+    background: -o-linear-gradient(bottom right, #6B02FF, #985BEF);
+    background: -moz-linear-gradient(bottom right, #008aff, #1ad2fd);
+    background: linear-gradient(135deg, #6B02FF 0%, #985BEF 100%);
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 50px;
+    height: 3px;
+}
+
+.team-img {
+    max-width: 140px;
+    padding: 6px;
+    background-color: #dedede;
+    border-radius: 50%;
+}
+
+ul.team-icon {
+    margin-top: 25px;
+}
+
+ul.team-icon li {
+    display: inline-block;
+    margin: 0 3px;
+    transition: all 0.25s ease-in-out;
+}
+
+ul.team-icon li a {
+    margin: 0;
+    display: inline-block;
+    padding: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    line-height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #fff;
+}
+
+ul.team-icon li a:hover {
+    color: #dedede;
+    transition: all 0.25s ease-in-out;
 }

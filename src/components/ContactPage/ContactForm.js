@@ -28,16 +28,14 @@ export default function ContactForm({ heading, color }) {
       },
     }));
 
-    const onSubmit = async () => {
-        await sendContactForm(values);
-    };
+  const onSubmit = async () => {
+    await sendContactForm(values);
+  };
 
   return (
     <section className={`${color}`}>
       <div className="app__container grid grid-cols-1 md:grid-cols-2 gap-12 py-16 md:py-32">
-        <div className="my-auto">
-          <Image src={image.getInTouch} alt="contact Us" />
-        </div>
+
         <form>
           <div className="space-y-12">
             <div className="pb-6">
@@ -185,6 +183,10 @@ export default function ContactForm({ heading, color }) {
             </button>
           </div>
         </form>
+        <div className="my-auto ">
+          <h2 className="m-0 text-sm lg:text-xl font-extrabold tracking-tight leading-2 capitalize pb-2 text-gray-900">Our team operates around the clock,<br />accommodating both <span className="highlight">Indian and international</span> time<br /> zones to serve our clients effectively, ensuring<br /><span className="highlight">availability for 24 hours a day, 6 days a week</span> </h2>
+          <Image className="p-0" src={image.getInTouch} alt="contact Us" />
+        </div>
       </div>
     </section>
   );

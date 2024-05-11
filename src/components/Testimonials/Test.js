@@ -8,64 +8,86 @@ const Test = () => {
   const testimonials = [
     {
       id: 1,
-      name: "WebDev.com",
+      name: "DreamEdu.com",
       message:
-        "We have a great business relationship with WebDev. We had worked with several other marketing companies in the past who did not deliver results and I am happy to say WebDev is doing that for us. They help bring our vision to life in a way that makes sense",
+        "We have a great business relationship with Dream Education. We had worked with several other companies in the past who did not deliver results and I am happy to say Dream Education is doing that for us. You guyz are amazing!!",
       imgUrl: image.client,
+      imgurl: image.client2,
+      Name: "Christna Bello"
     },
     {
       id: 2,
-      name: "WebDev.com",
+      name: "DreamEdu.com",
       message:
-        "WebDev has done a wonderful job redesigning our website to take it from plain and functional to amazingly professional. We would highly recommend WebDev to any business that needs a hand improving their internet traffic or their business.",
+        "Dream Education has done a wonderful job and they are amazingly professional. We would highly recommend Dream Education to any business that needs a hand improving their internet traffic or their business.",
       imgUrl: image.client,
+      Name: "Sophie Leonard"
     },
     {
       id: 3,
-      name: "WebDev.com",
+      name: "DreamEdu.com",
       message:
-        "Today we work with statistics and more accurate data and realize the digital space is an essential tool for Clinica da Mama to position itself in an increasingly competitive field",
+        "Today we work with statistics and more accurate data and realize the digital space SEO is an essential tool for Clinica da Mama to position itself in an increasingly competitive field and Dream Education helped us very well.",
       imgUrl: image.client,
+      Name: "James Sheferd"
     },
     {
       id: 4,
-      name: "WebDev.com",
+      name: "DreamEdu.com",
       message:
         "It really met my requirements. You guys were very patient even though there were delays from my side. The price was competitive and all our requirements were met. If somebody were to ask me for something similar, I would definitely recommend you guys!",
       imgUrl: image.client,
+      Name: "Thomas Henary"
     },
   ];
 
   const [activeSlide, setActiveSlide] = useState(0);
+  const [carouselPaused, setCarouselPaused] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveSlide((prevState) => (prevState + 1) % testimonials.length);
+      if (!carouselPaused) {
+        setActiveSlide((prevState) => (prevState + 1) % testimonials.length);
+      }
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, [carouselPaused, testimonials.length]);
+
+  const handleMouseEnter = () => {
+    setCarouselPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setCarouselPaused(false);
+  };
 
   return (
-    <section className="py-24 sm:py-32 bg-[#FAF1F2]">
-      <div className="app__container grid grid-cols-1 md:grid-cols-2">
+    <section className="py-60 sm:py-52 bg-[#FAF1F2]">
+      <div className="app__container -mt-24 grid grid-cols-1 md:grid-cols-2">
         <div className="relative left-[5%] right-[5%] h-80">
+          <h4 className="highlight z-2 primary-heading mb-8 text-5xl lg:text-5xl font-extrabold capitalize tracking-tight">Testimonials</h4>
           <ChatBubbleLeftRightIcon className="absolute h-60 w-60 md:bottom-12 right-12 text-[#ffdbc2]" />
-          <div className="absolute md:top-12 pr-8">
-            <h4 className="highlight z-2">Testimonials</h4>
-            <h1 className="mt-2 text-4xl font-extrabold">
+          <div className="absolute mt-5 md:top-12 pr-8">
+
+            <h1 className="mt-10 mb-20 text-4xl font-extrabold">
               See What Our <br />
               <span className="highlight">Client</span> Says
             </h1>
-            <p className="mt-4 app__text">
-            Discover what our clients are saying about our digital marketing solutions. Read testimonials from satisfied customers and learn how WebDev has helped businesses like yours achieve their marketing goals.
-            </p>
+            <div className="flex items-center justify-start gap-4 mt-6">
+              <Image src={testimonials[0].imgurl} height={50} width={50} alt="" />
+              <p className="ms-4 mt-4 text-lg font-semibold app__text relative bg-white h-30 w-96 shadow-lg px-6 py-6 rounded-xl">
+                Discover what our clients are saying about our digital solutions. Read testimonials from satisfied customers </p>
+            </div>
           </div>
         </div>
-        <div className="relative bg-white h-80 shadow-lg px-6 py-12 rounded-xl">
+        <div className="relative bg-white h-80 shadow-lg px-6 py-12 rounded-xl"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <Image
             src={image.quote}
-            className="absolute bottom-0 right-2"
+            className="absolute bottom-0 right-20"
             height={150}
             width={150}
             alt=""
@@ -73,14 +95,16 @@ const Test = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className={`slide-test app__text ${
-                activeSlide === index ? "activeSlider-test" : ""
-              }`}
+              className={`slide-test app__text ${activeSlide === index ? "activeSlider-test" : ""
+                }`}
             >
-              <p>&ldquo; {testimonial.message} &rdquo;</p>
+              <p className="font-semibold">&ldquo; {testimonial.message} &rdquo;</p>
               <div className="flex items-center justify-start gap-4 mt-6">
                 <Image src={testimonial.imgUrl} height={50} width={50} alt="" />
-                <h3 className="text-xl font-semibold">{testimonial.name}</h3>
+                <div>
+                  <h3 className="text-lg font-extrabold my-3" >{testimonial.name}</h3>
+                  <h4 className="text-3xl font-extrabold">{testimonial.Name}</h4>
+                </div>
               </div>
             </div>
           ))}

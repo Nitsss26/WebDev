@@ -13,37 +13,37 @@ export const metadata = {
 }
 const sections = [
   {
-    section: <DigitalMarketing/>
+    section: <DigitalMarketing />
   },
   {
-    section: <Influencer/>
+    section: <Influencer />
   },
+  // {
+  //   section: <FeaturedService />
+  // },
   {
-    section: <FeaturedService/>
+    section: <Marketing />
   },
+  // {
+  //   section: <Cta heading={"Digital Marketing SMO & SEO Solution!"} para={"Our digital marketing solutions encompass both SMO (Social Media Optimization) and SEO (Search Engine Optimization) strategies, designed to maximize online visibility and engagement for businesses."} />
+  // },
   {
-    section: <Marketing/>
-  },
-  {
-    section: <Cta heading={"Digital Marketing SMO & SEO Solution!"} para={"Our digital marketing solutions encompass both SMO (Social Media Optimization) and SEO (Search Engine Optimization) strategies, designed to maximize online visibility and engagement for businesses."}/>
-  },
-  {
-    section: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-white"}/>
+    section: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-slate-100"} />
   }
 ]
 const DigitalM = () => {
   return (
     <>
-    <Breadcrumbs name={"Digital Marketing"}/>
-    {
-      sections.map((i,k) => {
-        return (
-          <PageWrapper key={k}>
-          {i.section}
-          </PageWrapper>
-        )
-      })
-    }
+      {/* <Breadcrumbs name={"Digital Marketing"}/> */}
+      {
+        sections.map((i, k) => {
+          return (
+            <PageWrapper key={k}>
+              {i.section}
+            </PageWrapper>
+          )
+        })
+      }
     </>
   )
 }

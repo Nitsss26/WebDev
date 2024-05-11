@@ -1,70 +1,64 @@
-import image from '@/constant/Images/image'
-import { CheckCircleIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
-import React from 'react'
+import image from '@/constant/Images/image';
+import { CheckCircleIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import React from 'react';
 
 const NeedService = () => {
   return (
-    <section className="we-are-area py-16 md:py-32 flex items-center">
-    <div className="app__container grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-    <div className="we-are-img">
-    <div className="we-are-banner-img">
-      <Image src={image.ppcTrend} alt="SEM Marketing" />
-    </div>
-  </div>
-      <div className="my-auto">
-        <div className="we-are-content">
-          <div className="section-title">
-            <h2 className="pb-12 primary-heading">
-            NEED OF SOCIAL MARKETING FOR <span className='highlight'>YOUR BRAND</span>
-            </h2>
+    <section className="we-are-area py-16 pt-32 flex items-center -mt-20">
+      <div className="app__container grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+        <div className="we-are-img">
+          <div className="we-are-banner-img mt-24 -ms-9">
+            <Image src={image.social} alt="Test Creation Service" />
           </div>
+        </div>
+        <div className="my-auto">
+          <div className="we-are-content">
+            <div className="section-title">
+              <h2 className="pb-12 primary-heading">
+                NEED FOR CUSTOMIZED TEST CREATION <span className='highlight'>SERVICES</span>
+              </h2>
+            </div>
 
-          <p className='app__text'>
-          Do you want to know the secret behind the magic of marketing and the science of sales? Yes, you heard it right: social media marketing is behind every magic that happens in the world of businesses.
-          </p>
+            <p className='app__text font-bold -mt-5'>
+              Elevate your institution or competitive exam with our <b className='highlight'>test creation </b> service designed for <b className='highlight'>good preparation</b> of your students or candidates for exams.
+            </p>
 
-          <ul role="list" className="mt-8 space-y-8 app__text">
-            <li className="flex gap-x-3">
-              <CheckCircleIcon
-                className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                aria-hidden="true"
-              />
-              
-              <span><strong className="font-semibold text-gray-900">Build Your Brand&apos;s Voice:</strong> Social media has a benefit over traditional media because it can get your brand in front of people much more quickly and easily. Furthermore, it gets your audience to look at your brand even when they are not thinking about your brand or product.</span>
-            </li>
-            <li className="flex gap-x-3">
-              <CheckCircleIcon
-                className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                aria-hidden="true"
-              />
-              
-              <span><strong className="font-semibold text-gray-900"> Conversations About Brand:</strong> We generate gossip among society about your brand and your products, which helps to gain the attention of customers.</span>
-            </li>
-            <li className="flex gap-x-3">
-              <CheckCircleIcon
-                className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                aria-hidden="true"
-              />
-              
-              <span><strong className="font-semibold text-gray-900">Social Listening:</strong> We know what your target customers are interested in by monitoring their social conversations around certain topics. This is called social listening and can help you understand what is important to your audience while identifying trends they are following.</span>
-            </li>
-            <li className="flex gap-x-3">
-              <CheckCircleIcon
-                className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                aria-hidden="true"
-              />
-             
-              <span><strong className="font-semibold text-gray-900">Responsible Customer Service:</strong> We build meaningful relationships between your company and your customers. Social media allows for immediate interaction and customer feedback. Businesses can also respond to their customers right away.</span>
-            </li>
-          </ul>
+            <ul role="list" className="mt-8 space-y-8 app__text">
+              <li className="flex gap-x-3">
+                <CheckCircleIcon
+                  className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                  aria-hidden="true"
+                />
+                <span><strong className="font-semibold text-gray-900">Customized Test Papers:</strong> We offer a wide range of test formats, including <b>All India type tests</b>, <b className='highlight'>online assessments</b>, and <b>offline test papers</b>, tailored to your specific exam requirements.</span>
+              </li>
+              <li className="flex gap-x-3">
+                <CheckCircleIcon
+                  className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                  aria-hidden="true"
+                />
+                <span><strong className="font-semibold text-gray-900">Comprehensive Test Creation:</strong> Our service includes the creation of comprehensive test papers covering all <b className='highlight'> relevant topics </b> and exam patterns.</span>
+              </li>
+              <li className="flex gap-x-3">
+                <CheckCircleIcon
+                  className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                  aria-hidden="true"
+                />
+                <span><strong className="font-semibold text-gray-900">Quality Assurance:</strong> We ensure the <b className='highlight'>quality</b> and <b className='highlight'>accuracy</b> of each test paper, adhering to industry standards and best practices.</span>
+              </li>
+              <li className="flex gap-x-3">
+                <CheckCircleIcon
+                  className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                  aria-hidden="true"
+                />
+                <span><strong className="font-semibold text-gray-900">Expert Guidance:</strong> Our team of <b >experienced educators</b> and <b className='highlight'>exam specialists</b> provide valuable insights and guidance throughout the test creation process.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+    </section>
+  );
+};
 
-
-    </div>
-  </section>
-  )
-}
-
-export default NeedService
+export default NeedService;

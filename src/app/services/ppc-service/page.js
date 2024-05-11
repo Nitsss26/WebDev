@@ -10,27 +10,31 @@ export const metadata = {
   description: 'All digital marketing services, seo, smo, PPC, web development.',
 }
 const sections = [
+  // {
+  //   section: <Ppc />
+  // },
   {
-    section: <Ppc/>
-  },{
-    section: <WeHelp name={"PPC Services"}/>
-  },{
-    section: <Trend/>
-  },{
-    section: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-slate-50"}/>
+    section: <Trend />
+  },
+  {
+    section: <WeHelp name={"Video Creation Service"} />
+  },
+
+  {
+    section: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-slate-50"} />
   }
 ]
 const PpcService = () => {
   return (
     <>
-    <Breadcrumbs name={"PPC Services"}/>
-    {sections.map((i,k) => {
-      return (
-        <PageWrapper key={k}>
-        {i.section}
-        </PageWrapper>
-      )
-    })}
+      {/* <Breadcrumbs name={"PPC Services"} /> */}
+      {sections.map((i, k) => {
+        return (
+          <PageWrapper key={k}>
+            {i.section}
+          </PageWrapper>
+        )
+      })}
     </>
   )
 }

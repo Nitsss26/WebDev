@@ -11,18 +11,18 @@ export const metadata = {
 const SeoService = () => {
   return (
     <>
-    <Breadcrumbs name={"SEO Services"}/>
-    <PageWrapper>
-    <Seo/>
-    </PageWrapper>
+      {/* <Breadcrumbs name={"SEO Services"}/> */}
+      <PageWrapper>
+        <Seo />
+      </PageWrapper>
 
-    <PageWrapper>
-    <SeoServices/>
-    </PageWrapper>
+      <PageWrapper>
+        <SeoServices />
+      </PageWrapper>
 
-    <PageWrapper>
-    <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-white"}/>
-    </PageWrapper>
+      <PageWrapper>
+        <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-slate-50"} />
+      </PageWrapper>
     </>
   )
 }

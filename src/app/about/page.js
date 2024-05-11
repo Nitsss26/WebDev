@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs"
 import Cta from "@/components/CTA/Cta"
 import { PageWrapper } from "../page-wrapper"
 import ContactForm from "@/components/ContactPage/ContactForm"
+import Director from "../Director/page"
 
 export const metadata = {
   title: 'About - Digital Marketing Agency / Expert at SEO, SMO',
@@ -13,37 +14,40 @@ export const metadata = {
 }
 const aboutSections = [
   {
-    section: <AboutUs/>
+    section: <Director />
   },
   {
-    section: <Award/>
+    section: <Award />
   },
   {
-    section: <BestFeature/>
+    section: <BestFeature />
   },
+  // {
+  //   section: <Cta heading={"Digital Marketing SMO & SEO Solution!"} para={"Our digital marketing solutions encompass both SMO (Social Media Optimisation) and SEO (Search Engine Optimisation) strategies, designed to maximise online visibility and engagement for businesses."} />
+  // },
   {
-    section: <Cta heading={"Digital Marketing SMO & SEO Solution!"} para={"Our digital marketing solutions encompass both SMO (Social Media Optimisation) and SEO (Search Engine Optimisation) strategies, designed to maximise online visibility and engagement for businesses."}/>
+    section: <AboutWorking />
   },
-  {
-    section: <AboutWorking/>
-  },
-  {
-    section: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-white"}/>
-  }
+  // {
+  //   section: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-slate-50"} />
+  // },
+  // {
+  //   section: <AboutUs />
+  // },
 ]
 const About = () => {
   return (
     <>
-    <Breadcrumbs name={"About Us"}/>
-    {
-      aboutSections.map((i) => {
-        return (
-          <PageWrapper key={i}>
-          {i.section}
-          </PageWrapper>
-        )
-      })
-    }
+      {/* <Breadcrumbs name={"About Us"} /> */}
+      {
+        aboutSections.map((i) => {
+          return (
+            <PageWrapper key={i}>
+              {i.section}
+            </PageWrapper>
+          )
+        })
+      }
     </>
   )
 }
