@@ -30,7 +30,7 @@ const items = {
 
 const ContactAddress = () => {
   return (
-    <section className="contact-us-wrapper py-16 md:py-32 bg-slate-50">
+    <section className="contact-us-wrapper pb-32 -mt-10 pt-8 md:pt-16 bg-slate-100">
       <div className="app__container contact-heading text-center mx-w-700 m-auto pb-50 pb-md-30 get-bottom animate">
         <div className="section-title pb-25 animate">
           <h2 className="text-3xl primary-heading capitalize">Contact us for any <span className="highlight">help</span></h2>
@@ -69,15 +69,16 @@ const ContactAddress = () => {
               </div>
               <div className="contact-card-content mt-4">
                 <h6 className='font-semibold'>
-                  Sector 63, Noida,
+                  Gulzar 63, Aligarh,
                   <br />
-                  UP, India - 201301
+                  UP, India - 202001
                 </h6>
               </div>
             </div>
           </motion.div>
         </motion.div>
       </div>
+
     </section>
   );
 };

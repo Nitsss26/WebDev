@@ -6,16 +6,23 @@ import Image from "next/image";
 
 const services = [
   {
-    heading: "Digital Marketing",
-    imgUrl: image.digitalMarketing,
-    hoverBg: "pink-hover",
-    iconColor: "pink-text",
-  },
+    heading: "Live Tutoring & Doubt Solving",
+    imgUrl: image.wd,
+    hoverBg: "yellow-hover",
+    iconColor: "yellow-text",
+  }
+  ,
   {
-    heading: "PPC Service",
+    heading: "Educational Video Creation",
     imgUrl: image.ppc,
     hoverBg: "paste-hover",
     iconColor: "paste-text",
+  },
+  {
+    heading: "SEO Optimized Blogs",
+    imgUrl: image.seo,
+    hoverBg: "purple-hover",
+    iconColor: "purple-text",
   },
   {
     heading: "SMO Service",
@@ -24,29 +31,24 @@ const services = [
     iconColor: "yellow-text",
   },
   {
-    heading: "SEO Service",
-    imgUrl: image.seo,
-    hoverBg: "purple-hover",
-    iconColor: "purple-text",
-  },
-  {
-    heading: "Social Marketing",
-    imgUrl: image.socialMarketing,
-    hoverBg: "pink-hover",
-    iconColor: "pink-text",
-  },
-  {
     heading: "Web Optimization",
     imgUrl: image.wo,
     hoverBg: "paste-hover",
     iconColor: "paste-text",
-  },
+  }, {
+    heading: "Social Marketing",
+    imgUrl: image.socialMarketing,
+    hoverBg: "pink-hover",
+    iconColor: "pink-text",
+  }
+  ,
   {
-    heading: "Web Development",
-    imgUrl: image.wd,
-    hoverBg: "yellow-hover",
-    iconColor: "yellow-text",
-  },
+    heading: "Digital Marketing",
+    imgUrl: image.digitalMarketing,
+    hoverBg: "pink-hover",
+    iconColor: "pink-text",
+  }
+  ,
 ];
 
 const CaseStudy = () => {
@@ -57,16 +59,17 @@ const CaseStudy = () => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
   return (
-    <section className="py-24 sm:py-32">
-      <div className="app__container grid grid-cols-1 md:grid-cols-2 gap-y-8">
-        <div className="my-auto">
+    <section className="py-24 test-center sm:py-20">
+      <div className="app__container grid grid-cols-1 md:grid-cols-1 gap-y-4">
+        <div className="mb-7 text-center">
           <h1 className="primary-heading">
             Any Doubt ? Just <br />
-            Check Out <span className="highlight">Case Study.</span>
+            Check Out <span className="highlight">Our Services.</span><br />
+            And <span className="highlight">Blogs.</span>
           </h1>
         </div>
 
-        <div>
+        <div className="mt-10">
           <motion.div
             ref={carousel}
             className="carousel"

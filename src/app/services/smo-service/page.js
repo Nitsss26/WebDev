@@ -11,28 +11,28 @@ export const metadata = {
 }
 const sections = [
   {
-    section: <Smo/>
-  },{
-    section: <SemService/>
-  },{
-    section: <ServiceInclude/>
-  },{
-    section: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-slate-50"}/>
+    section: <Smo />
+  }, {
+    section: <SemService />
+  }, {
+    section: <ServiceInclude />
+  }, {
+    section: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-slate-50"} />
   }
 ]
 const SmoService = () => {
   return (
     <>
-    <Breadcrumbs name={"SMO Services"}/>
-    {
-      sections.map((i,k) => {
-        return (
-          <PageWrapper key={k}>
-          {i.section}
-          </PageWrapper>
-        )
-      })
-    }
+      {/* <Breadcrumbs name={"SMO Services"}/> */}
+      {
+        sections.map((i, k) => {
+          return (
+            <PageWrapper key={k}>
+              {i.section}
+            </PageWrapper>
+          )
+        })
+      }
     </>
   )
 }

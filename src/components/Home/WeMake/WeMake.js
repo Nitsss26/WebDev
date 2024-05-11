@@ -1,33 +1,9 @@
 "use client"
 import { motion } from 'framer-motion'
 import { CodeBracketIcon, CodeBracketSquareIcon, PencilSquareIcon, UserGroupIcon } from '@heroicons/react/24/outline'
-
-const features = [
-  {
-    name: 'Website Optimization & Designing',
-    description:
-      'To represent all the aspects of your product, you need to keep designing your website in different ways to meet the demands of time and customers. Customers do visit the website, but what makes them buy is how irresistible and relatable it is to them.',
-    icon: CodeBracketIcon,
-  },
-  {
-    name: 'Content Marketing',
-    description:
-      '70% of consumers would learn about products through content mediums rather than traditional advertising. It is not easy to get people to spend money on something they haven’t heard of before. So, you will need content that will educate your audience about your product. Use infographics and maps to talk about your product.',
-    icon: PencilSquareIcon,
-  },
-  {
-    name: 'Hire Your IT Experts / PR Experts',
-    description:
-      'From creating a relevant template to designing your whole website, we create everything you need. Customers are generally not patient enough to read through the link if the website looks boring. We make you look presentable and relatable to your product.',
-    icon: CodeBracketSquareIcon,
-  },
-  {
-    name: 'Targeted Audience',
-    description:
-      'We market you to not just your target audience but also your potential audience. Come join us on the journey to making you an influence.',
-    icon: UserGroupIcon,
-  },
-]
+import Image from 'next/image'
+import image from '@/constant/Images/image'
+import WeCan from '../WeCan/WeCan'
 
 const variants = {
   hidden: { opacity: 0 },
@@ -55,30 +31,63 @@ const items = {
 
 export default function WeMake() {
   return (
-    <div className="bg-slate-50 py-24 sm:py-32">
-      <div className="app__container">
+    <div className="bg-slate-50 py-12 sm:py-12 mb-36 -pb-40 relative">
+      <Image
+        src={image.Bg}
+        className="w-auto h-0"
+        height={150}
+        width={150}
+        alt=""
+      />
+      <div className="absolute inset-0 opacity-12">
+        <Image
+          src={image.Bg}
+          layout="fill"
+          objectFit="cover"
+          alt=""
+          style={{ opacity: 0.12 }} // Change the opacity here
+        />
+      </div>
+      <div className="app__container relative z-10 -mb-20">
         <div className="mx-auto max-w-2xl lg:text-center">
           <p className="mt-2 primary-heading text-gray-900 text-center">
-          We Make Your <span className='highlight'>Seo Service</span> Faster
+            We Make Your <span className='highlight'>Service</span> Faster
           </p>
-          <p className="mt-6 text-lg leading-8 app__text text-center">
-          For more expert opinions about better investments and cute promotional aspects, contact WebDev Private Limited. Because,
+          <p className="mt-4 text-base leading-8 app__text text-center font-bold">
+            For more expert opinions about better investments and cute promotional aspects, contact DreamEdu Private Limited. Because,
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <motion.dl variants={variants} initial="hidden" whileInView="show" className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {features.map((feature) => (
-              <motion.div variants={items} key={feature.name} className="relative pl-24">
-                <dt className="text-xl font-extrabold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-16 w-16 items-center justify-center rounded-full shadow-lg bg-white hover:bg-indigo-600 text-indigo-600 hover:text-white">
-                    <feature.icon className="h-6 w-6 " aria-hidden="true" />
-                  </div>
-                  {feature.name}
+        <div className="flex flex-row">
+          <div className="mx-auto mt-6 ms-20 max-w-2xl sm:mt-6 lg:mt-8 lg:max-w-4xl">
+            <motion.dl variants={variants} initial="hidden" whileInView="show" className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+              <motion.div variants={items} className="relative pl-24">
+                <dt className="text-xl bg- white font-extrabold leading-7 text-gray-900">
+                  <div className="absolute left-0 top-0 flex h-16 w-16 items-center justify-center rounded-full shadow-lg bg-white hover:bg-[#ff6a00] text-[#ff6a00] hover:text-white">
+                    <CodeBracketIcon className="h-6 w-6 " aria-hidden="true" />
+                  </div >
+                  <span className=' font-extrabold'>Our Mission</span>
                 </dt>
-                <dd className="mt-2 text-base leading-7 app__text">{feature.description}</dd>
+                <dd className="mb-10 mt-2 text-base bg-white p-3 rounded-3xl font-bold leading-7 app__text">
+                  Crafting <span className='highlight font-extrabold'>engaging</span> educational content that sparks curiosity and fosters <span className='highlight font-extrabold'>innovation</span>.Our dedication lies in tailoring solutions to meet a <span className='highlight font-extrabold'>broad spectrum</span> of learning needs, ensuring a personalized solutions </dd>
               </motion.div>
-            ))}
-          </motion.dl>
+            </motion.dl>
+
+            <motion.dl variants={variants} initial="hidden" whileInView="show" className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 mt-8 lg:mt-0">
+              <motion.div variants={items} className="relative pl-24">
+                <dt className="text-xl font-extrabold leading-7 text-gray-900">
+                  <div className="absolute left-0 top-0 flex h-16 w-16 items-center justify-center rounded-full shadow-lg bg-white hover:bg-[#ff6a00] text-[#ff6a00] hover:text-white">
+                    <CodeBracketSquareIcon className="h-6 w-6 " aria-hidden="true" />
+                  </div>
+                  <span className='font-extrabold'>Our Vision</span>
+                </dt>
+                <dd className="mt-2 text-base bg-white p-3 rounded-3xl font-bold leading-7 app__text">
+                  In our vision, we strive to create vibrant <span className='highlight font-extrabold'>educational content</span> that sparks innovation. We are <span className='highlight font-extrabold'>dedicated</span> to crafting tailored solutions for diverse learning needs <span className='highlight font-extrabold'>globally.</span></dd>
+              </motion.div>
+            </motion.dl>
+          </div>
+          <div className="flex-auto">
+            <WeCan />
+          </div>
         </div>
       </div>
     </div>

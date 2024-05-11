@@ -9,52 +9,74 @@ import Test from "@/components/Testimonials/Test";
 import CaseStudy from "@/components/Home/CaseStudy/CaseStudy";
 import WeCan from "@/components/Home/WeCan/WeCan";
 import ContactForm from "@/components/ContactPage/ContactForm";
+import Blog from "@/components/Home/Blog/Blog";
 
 export default function Home() {
   const content = [{
-    heading: "Content Marketing",
-    description: "Content marketing 70% of consumers would learn about products through content medium rather than traditional advertising. It is not easy to get people to spend money on something they have not heard of ever before.",
-  },{
-    heading: "Digital Marketing",
-    description: "Digital marketing is one of the best techniques used for product and business promotion. We use the above-mentioned ways to promote your product to help you succeed in converting your audience into sales."
-  },{
-    heading: "Website Development",
-    description: "A website is the essence and the personality of the company and unlike humans this personality can change and can very profitably effect the people around the world."
+    heading: "Solution Writing",
+    description: "Our solution writing service bridges this gap, effectively conveying your brand's value in concise, compelling content.",
+  }, {
+    heading: "Video Solutions",
+    description: "Our video solution services effectively showcase your brand's value, captivating audiences with engaging visual content."
+  }, {
+    heading: "Test Creation",
+    description: "We excel in crafting custom test papers, enriching educational resources to elevate learning experiences for students."
+  }, {
+    heading: "K-12 Education",
+    description: "We specialize in K-12 curriculum design, collaborating with educators to create impactful, industry-standard materials."
+  }, {
+    heading: "Books Writing",
+    description: "We excel in book writing, crafting captivating narratives in collaboration with authors for impactful storytelling."
+  }, {
+    heading: "Translation",
+    description: "We offer expert translation services, ensuring accurate and culturally sensitive communication across languages."
   }]
 
 
 
   const homeSections = [
     {
-      page: <Feature content={content} mainHeading={`We Help You Increase Sales By Improving SEO / PPC / SMO Of <span class="highlight">Your Brand</span>`}/>
-    },    {
-      page: <WeAre/>
-    },{
-      page: <WeCan/>
-    },    {
-      page: <WeMake/>
-    },    {
-      page: <HomeStats/>
-    },    {
-      page: <Prefer/>
-    },    {
-      page: <CaseStudy/>
-    },    {
-      page: <Test/>
-    },    {
-      page: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-white"}/>
+      page: <Feature content={content} mainHeading={`We Help You With Educational Solutions Like Video Tutorials, Test Creations, More For Our <span class="highlight">Popular Services</span>`} />
+    },
+    // {
+    //   page: <WeAre />
+    // },
+    // {
+    //   page: <WeCan />
+    // },
+    {
+      page: <WeMake />
+    },
+    // {
+    {
+      page: <HomeStats />
+    },
+    //{
+    //   page: <Prefer />
+    // },
+    {
+      page: <Test />
+    }, {
+      page: <CaseStudy />
+
+    },
+    {
+      page: <Blog />
+    },
+    {
+      page: <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-slate-50"} />
     }
   ]
   return (
     <>
-    <Hero/>
-    {homeSections.map((i, k) => {
-      return (
-        <PageWrapper key={k}>
-        {i.page}
-        </PageWrapper>
-      )
-    })}
+      <Hero />
+      {homeSections.map((i, k) => {
+        return (
+          <PageWrapper key={k}>
+            {i.page}
+          </PageWrapper>
+        )
+      })}
     </>
   )
 }

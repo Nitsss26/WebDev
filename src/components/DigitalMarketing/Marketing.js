@@ -99,7 +99,7 @@ const Marketing = () => {
                     </h3>
                   </div>
                   <p className="app__text">
-                  70% of consumers would learn about products through content rather than traditional advertising. It is not easy to get people to spend money on something they have never heard of before. So, you will need content that will educate your audience about your product. Use infographics and maps to talk about your product.
+                    70% of consumers would learn about products through content rather than traditional advertising. It is not easy to get people to spend money on something they have never heard of before. So, you will need content that will educate your audience about your product. Use infographics and maps to talk about your product.
                   </p>
                 </div>
               </div>
@@ -107,8 +107,8 @@ const Marketing = () => {
           </motion.div>
 
           <motion.div variants={items}>
-            <div className="single-feature-two blue-shape">
-              <div className="h2-feature-icon shadow-lg blue-shadow bg-blue">
+            <div className="single-feature-two green-shape">
+              <div className="h2-feature-icon shadow-lg blue-shadow bg-green-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="512pt"
@@ -174,6 +174,7 @@ const Marketing = () => {
                   </g>
                 </svg>
               </div>
+
               <div className="card-two-content animate get-bottom">
                 <div>
                   <div className="card-title">

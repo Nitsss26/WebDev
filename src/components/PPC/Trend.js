@@ -4,45 +4,46 @@ import Image from "next/image"
 
 const Trend = () => {
   return (
-    <section className="we-are-area py-16 md:py-32 flex items-center">
-    <div className="app__container grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-      <div className="we-are-img">
-        <div className="we-are-banner-img">
-          <Image src={image.ppcTrend} alt="PPC Trend" />
+    <section className="we-are-area py-16 md:py-16 flex items-center">
+      <div className="app__container grid grid-cols-1 md:grid-cols-2 gap-8 relative -mt-4">
+        <div className="we-are-img -ms-12">
+          <div className="we-are-banner-img">
+            <Image src={image.ppcTrend} alt="PPC Trend" />
+          </div>
         </div>
-      </div>
         <div className="my-auto">
           <div className="we-are-content">
             <div className="section-title">
-              <h2 className="pb-12 primary-heading">PPC trend to look for the <span className="highlight">best in 2022</span></h2>
+              <h2 className="pb-12 primary-heading">ELEVATE YOUR BRAND WITH ENGAGING <span className="highlight">VIDEO CREATION</span> SERVICES</h2>
             </div>
 
-            <p className="app__text">To represent all the aspects of your product, you need to keep designing it in different ways according to the demands of time and customers. Customers do visit the website, but what makes them buy is how irresistible and relatable it is to them.</p>
+            <p className="app__text text-base font-extrabold -mt-4 mb-4">When it comes to showcasing your brand, visuals speak louder than words. At <span className="highlight">Dream Education</span>, we specialize in crafting captivating videos that resonate with your audience. From <span className="highlight">educational</span> content to dynamic <br /> 2D and 3D animations. Let’s turn your vision into reality! 🎥.</p>
 
-            <ul role="list" className="mt-8 space-y-8 app__text">
-            <li className="flex gap-x-3">
-              <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              <span>
-              WebDev Private Limited is the best and the most administrator for the world of your imagination, blood, sweat, and tears.
-              </span>
-            </li>
-            <li className="flex gap-x-3">
-              <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              <span>
-              Join your hands with us and let&apos;s make a website that opens up a new doorway for customers into a new world designed by you.
-              </span>
-            </li>
-            <li className="flex gap-x-3">
-              <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-              <span>
-              WebDev Private Limited has experts who are experienced and know how and what specifications of a company or a product are to be showcased.
-              </span>
-            </li>
-          </ul>
+            <ul role="list" className="mt-10 font-semibold space-y-8 app__text">
+              <li className="flex gap-x-3">
+                <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                <span>
+                  Our team transforms complex ideas into engaging educational videos. Whether it’s <span className="highlight">explaining</span> a new concept or breaking down industry trends, we make learning enjoyable.
+                </span>
+              </li>
+              <li className="flex gap-x-3">
+                <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                <span>
+                  Our animations breathe life into your <span className="highlight">brand</span>. From eye-catching 2D animations to mesmerizing 3D visuals, we’ve got you covered.
+
+                </span>
+              </li>
+              <li className="flex gap-x-3">
+                <CheckCircleIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                <span>
+                  Our wizards blend creativity and technology to produce mindblowing, captivating <span className="highlight">animated</span> videos. Whether it’s a brand story or a product demo, we’ll make it unforgettable.
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-  </section>
+    </section>
   )
 }
 

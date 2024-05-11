@@ -8,8 +8,8 @@
 .square-animation{
     background: linear-gradient(to right, #EF0D75, #FE6407);
     padding: 2px;
-    left: 10%;
-    top:10%;
+    left: 9%;
+    top:9%;
 }
 
 .square-animation .square-animation-child{
@@ -21,7 +21,7 @@
     background: linear-gradient(to right, #EF0D75, #FE6407);
     padding: 2px 2px 0 0;
     left: 35%;
-    bottom:20%;
+    bottom:16%;
 }
 
 .square-animation-2 .square-animation-child-2{
@@ -32,7 +32,7 @@
 .square-animation-3{
     background: linear-gradient(to right, #EF0D75, #FE6407);
     padding: 0 0 2px 2px;
-    left: 50%;
+    left: 52%;
     bottom:50%;
 }
 
@@ -56,8 +56,8 @@
 .half-circle-animation{
     background: linear-gradient(to right, #EF0D75, #FFCC00);
     padding: 4px 4px 0 0;
-    left: 2%;
-    bottom:28%;
+    left: 65%;
+    bottom:15%;
 }
 
 .half-circle-animation .half-circle-animation-child{
@@ -66,7 +66,7 @@
 }
 
 .bubble-animation{
-    left: 50%;
+    left: 52%;
     top:20%;
 }
 

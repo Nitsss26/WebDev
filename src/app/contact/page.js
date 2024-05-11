@@ -10,13 +10,12 @@ export const metadata = {
 const Contact = () => {
   return (
     <>
-    <Breadcrumbs name={"Contact Us"}/>
-    <PageWrapper>
-    <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-white"}/>
-    </PageWrapper>
-    <PageWrapper>
-    <ContactAddress/>
-    </PageWrapper>
+      <PageWrapper>
+        <ContactForm heading={`Get in <span class="highlight">Touch</span>`} color={"bg-slate-100"} />
+      </PageWrapper>
+      <PageWrapper>
+        <ContactAddress />
+      </PageWrapper>
     </>
   )
 }
